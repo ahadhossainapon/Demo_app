@@ -1,0 +1,35 @@
+<!-- ========== Left Sidebar Start ========== -->
+
+<div class="left side-menu">
+  <div class="sidebar-inner slimscrollleft">
+    <!--- Divider -->
+    <div id="sidebar-menu">
+      <ul>
+        <li class="text-muted menu-title">Navigation</li>
+        <li class="has_sub">
+          <%= link_to  teachers_path , class:" view-dashboard" do %>
+              <i class="zmdi zmdi-invert-colors">Teachers</i>
+          <% end %>
+        </li>
+      </ul>
+      <ul>
+        <li class="has_sub">
+          <%= link_to  klasses_path , class:" view-dashboard" do %>
+              <i class="zmdi zmdi-invert-colors">Class</i>
+          <% end %>
+        </li>
+      </ul>
+      <ul>
+        <li class="has_sub">
+          <%= link_to  subjects_path , class:" view-dashboard" do %>
+              <i class="zmdi zmdi-invert-colors">Subjects</i>
+          <% end %>
+        </li>
+      </ul>
+      <div class="clearfix"></div>
+    </div>
+    <div class="clearfix"></div>
+
+  </div>
+</div>
+<!-- Left Sidebar End -->

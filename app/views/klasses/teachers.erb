@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Teachers Of this Class</h1>
+
+<table>
+  <thead>
+  <tr>
+    <th>name</th>
+    <th colspan="3"></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @klass.teachers.each do |teacher| %>
+      <tr>
+        <td><%= teacher.name %></td>
+        </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<%= link_to "add Teacher",  add_teacher_klass_path %>

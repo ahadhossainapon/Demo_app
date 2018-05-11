@@ -1,0 +1,7 @@
+<h2 >hi</h2>
+<%= form_tag save_subject_teacher_path  do %>
+    <%= select_tag :subject_id, options_for_select( @subjects.all.collect {|d| [ d.name, d.id ] }) %>
+    <%= submit_tag "Add" %>
+<% end %>
+
+

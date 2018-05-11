@@ -1,0 +1,20 @@
+
+<div id="teacher-edit-modal" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <div>
+
+        <h1>Editing Teacher</h1>
+
+        <%= render 'form' %>
+
+        <%= link_to 'Show', @teacher %> |
+        <%= link_to 'Back', teachers_path %>
+      </div>
+    </div>
+  </div>
+</div>

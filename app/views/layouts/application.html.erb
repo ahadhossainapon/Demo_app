@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DemoApp</title>
+  <%= csrf_meta_tags %>
+
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+
+<body class="fixed-left widescreen">
+<body class="fixed-left">
+
+<div id="wrapper">
+
+<%= render "shared/navBar" %>
+
+  <%= render "shared/left_sidebar" %>
+
+  <div class="content-page">
+    <div class="content">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+          </div>
+        </div>
+        <%= yield %>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      2017 © Flacto. Design by <a href="http://coderthemes.com/" target="_blank" class="text-muted">Coderthemes</a>
+    </footer>
+
+  </div>
+</div>
+
+
+
+</body>
+</body>
+</html>

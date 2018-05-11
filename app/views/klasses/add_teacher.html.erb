@@ -1,0 +1,22 @@
+<h2>hi</h2>
+<%= form_tag save_teacher_klass_url  do %>
+    <%= select_tag :teacher_id, options_for_select( @teacher.all.collect {|d| [ d.name, d.id ] }) %>
+    <%= submit_tag "Add" %>
+<% end %>
+
+<script type="text/javascript">
+    $( "#teacher_id" ).change(function() {
+        var item=$(this);
+
+        $.ajax({
+            url: "<%= subjects_teacher_path %>",
+            type: "get",
+            data: {"teacher_id" : $(this).val()},
+            dataType: "script",
+            success: function(data) {
+                alert('successfully');
+            }
+        });
+    });
+
+</script>

@@ -1,0 +1,36 @@
+
+<%= link_to 'New Teacher', new_teacher_path %>
+<p id="notice"><%= notice %></p>
+<div class="col-lg-10">
+  <div class="card-box">
+    <h4 class="header-title m-t-0 m-b-30" align="center">Teachers List</h4>
+    <div class="table-responsive">
+      <table class="table">
+        <thead>
+        <tr>
+          <th>name</th>
+          <th>address</th>
+          <th>phone</th>
+          <th>email</th>
+          <th colspan="3">Action</th>
+        </tr>
+        </thead>
+        <tbody>
+
+          <% @teacher.each do |teacher| %>
+            <tr>
+              <td><%= teacher.name %></td>
+              <td><%= teacher.address %></td>
+              <td><%= teacher.phone %></td>
+              <td><%= teacher.email %></td>
+              <td><%= link_to 'Show', teacher_path(teacher), remote: true %></td>
+              <td><%= link_to 'Edit', edit_teacher_path(teacher), remote: true  %></td>
+              <td><%= link_to 'Destroy', teacher, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            </tr>
+        <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<div id='teacher-content'></div>
